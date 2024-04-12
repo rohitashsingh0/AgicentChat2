@@ -1,6 +1,7 @@
-import PropTypes from 'prop-types';
-import useDarkMode from '../hooks/useDarkMode';
-import { MdOutlineNightlight, MdOutlineWbSunny } from 'react-icons/md';
+import PropTypes from "prop-types";
+import useDarkMode from "../hooks/useDarkMode";
+import { MdOutlineNightlight, MdOutlineWbSunny } from "react-icons/md";
+import { useState } from "react";
 
 /**
  * A toggle for switching between light and dark modes.
@@ -9,13 +10,14 @@ import { MdOutlineNightlight, MdOutlineWbSunny } from 'react-icons/md';
  * @param {boolean} props.open - Whether the sidebar is open or not.
  */
 const ToggleTheme = (props) => {
-  const [theme, setTheme] = useDarkMode();
+  // const [theme, setTheme] = useDarkMode();
+  const [theme, setTheme] = useState();
 
   /**
    * Toggles the dark mode.
    */
   const handleToggle = () => {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    setTheme(theme === "light" ? "dark" : "light");
   };
 
   return (
@@ -23,12 +25,12 @@ const ToggleTheme = (props) => {
       {theme ? (
         <>
           <MdOutlineWbSunny size={15} />
-          <p className={`${!props.open && 'hidden'}`}>Light mode</p>
+          <p className={`${!props.open && "hidden"}`}>Light mode</p>
         </>
       ) : (
         <>
           <MdOutlineNightlight size={15} />
-          <p className={`${!props.open && 'hidden'}`}>Night mode</p>
+          <p className={`${!props.open && "hidden"}`}>Night mode</p>
         </>
       )}
     </a>
