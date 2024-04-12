@@ -1,11 +1,11 @@
 {
-  "name": "chatgpt",
+  "name": "agicent",
   "version": "2.0.0",
   "type": "module",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/eyucoder/chatgpt-clone"
+    "url": "https://github.com/rohitashsingh0/AgicentChat2.git"
   },
   "author": {
     "name": "eyucoder",
